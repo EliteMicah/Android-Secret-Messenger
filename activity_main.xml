@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.125"
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor,TextSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -62,15 +62,46 @@
         android:layout_height="118dp"
         android:background="@drawable/button_border"
         android:text="@string/EducationButton"
-        android:textSize="30sp"
-        android:textColor="@color/lightBlue"
+        android:textColor="#40C4FF"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintVertical_bias="0.35"
+        tools:ignore="TextContrastCheck" />
 
+    <Button
+        android:id="@+id/EncodeButton"
+        android:layout_width="310dp"
+        android:layout_height="118dp"
+        android:background="@drawable/button_border"
+        android:text="@string/EncodeButton"
+        android:textColor="#40C4FF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.588"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/DecodeButton"
+        android:layout_width="310dp"
+        android:layout_height="118dp"
+        android:background="@drawable/button_border"
+        android:text="@string/DecodeButton"
+        android:textColor="#40C4FF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
