@@ -1,5 +1,7 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Secret_Messenger</string>
     <string name="HomeText">SECRET MESSENGER</string>
     <string name="EducationButton">Education</string>
+    <string name="EncodeButton">Encode</string>
+    <string name="DecodeButton">Decode</string>
 </resources>
