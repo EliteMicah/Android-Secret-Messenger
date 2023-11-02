@@ -1,15 +1,5 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" tools:ignore="Typos">Rebooked1</string>
-    <string name="contactButton">Add Contact</string>
-    <string name="firstNameText">First</string>
-    <string name="lastNameText">Last</string>
-    <string name="phoneText">Phone</string>
-    <string name="emailText">Email</string>
-    <string name="detailsText">Please enter your Contact Details</string>
-    <string name="firstNameHint">First Name</string>
-    <string name="lastNameHint">Last Name</string>
-    <string name="emailHint">Email Address</string>
-    <string name="phoneHint">Phone Number</string>
-    <string name="image1">Image</string>
-    <string name="contactAddedText">Contact Added!</string>
+<resources>
+    <string name="app_name">Secret_Messenger</string>
+    <string name="HomeText">SECRET MESSENGER</string>
+    <string name="EducationButton">Education</string>
 </resources>
