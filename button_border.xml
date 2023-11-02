@@ -13,3 +13,5 @@
     <corners android:radius="30dp" />
 
 </shape>
+
+<!-- button_border.xml is inside of the drawables folder -->
