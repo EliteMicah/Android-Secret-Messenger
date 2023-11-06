@@ -19,42 +19,58 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125"
+        app:layout_constraintVertical_bias="0.07"
         tools:ignore="LabelFor,TextSizeCheck" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/lockImage"
         android:layout_width="52dp"
         android:layout_height="58dp"
         android:contentDescription="@string/app_name"
         android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083"
+        app:layout_constraintVertical_bias="0.032"
         app:srcCompat="@android:drawable/ic_lock_lock"
         app:tint="@color/white"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="76dp"
-        android:layout_height="71dp"
+        android:id="@+id/speechBubbleIcon"
+        android:layout_width="115dp"
+        android:layout_height="94dp"
         android:contentDescription="@string/app_name"
-        android:elevation="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintHorizontal_bias="0.922"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084"
-        tools:ignore="ImageContrastCheck"
-        app:srcCompat="@drawable/ic_action_name" />
+        app:layout_constraintVertical_bias="0.015"
+        app:srcCompat="@android:drawable/sym_action_chat"
+        app:tint="@color/lightBlue"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/DecodeButton"
+        android:layout_width="310dp"
+        android:layout_height="118dp"
+        android:background="@drawable/button_border"
+        android:text="@string/DecodeButton"
+        android:textColor="#40C4FF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/EducationButton"
@@ -69,7 +85,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintVertical_bias="0.313"
         tools:ignore="TextContrastCheck" />
 
     <Button
@@ -85,23 +101,40 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588"
+        app:layout_constraintVertical_bias="0.551"
         tools:ignore="TextContrastCheck" />
 
-    <Button
-        android:id="@+id/DecodeButton"
-        android:layout_width="310dp"
-        android:layout_height="118dp"
-        android:background="@drawable/button_border"
-        android:text="@string/DecodeButton"
-        android:textColor="#40C4FF"
-        android:textSize="25sp"
+    <ImageButton
+        android:id="@+id/homeIcon"
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.831"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/DecodeButton"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/ic_action_name"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DecodeButton"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/settings_transparent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
