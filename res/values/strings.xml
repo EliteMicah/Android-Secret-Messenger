@@ -4,4 +4,15 @@
     <string name="EducationButton">Education</string>
     <string name="EncodeButton">Encode</string>
     <string name="DecodeButton">Decode</string>
+    <string name="Cryptography">CRYPTOGRAPHY</string>
+    <string name="blank"> </string>
+    <string name="education">EDUCATION</string>
+    <string name="EncodeText"> Encoded Message </string>
+    <string name="DecodeText"> Decoded Message </string>
+
+    <string-array name="encoding_levels">
+        <item>Low Level</item>
+        <item>Medium Level</item>
+        <item>High Level</item>
+    </string-array>
 </resources>
