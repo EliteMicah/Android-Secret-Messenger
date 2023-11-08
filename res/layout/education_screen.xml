@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/HomeText"
+        android:layout_width="374dp"
+        android:layout_height="105dp"
+        android:fontFamily="@font/abril_fatface"
+        android:minHeight="48dp"
+        android:scaleType="fitCenter"
+        android:text="@string/education"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121"
+        tools:ignore="LabelFor,TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/GlassesImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/app_name"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/glasses"
+        app:tint="@color/lightBlue"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/homeIcon"
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_icon"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/settings_transparent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/EncodingScreen"
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_lock"
+        app:tint="@color/black"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/EncodeButton"
+        android:layout_width="310dp"
+        android:layout_height="118dp"
+        android:background="@drawable/button_border"
+        android:text="Encoding Algorithm"
+        android:textColor="#40C4FF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/DecodeButton"
+        android:layout_width="310dp"
+        android:layout_height="118dp"
+        android:background="@drawable/button_border"
+        android:text="Decoding Algorithm"
+        android:textColor="#40C4FF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:text="Click on a field you would like to learn more about"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HomeText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
