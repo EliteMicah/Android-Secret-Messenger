@@ -4,8 +4,8 @@ import static com.example.secret_messenger.R.*;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.view.View;
 import android.widget.Button;
 
 
@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     Button encode;
     Button decode;
     Button education;
-
     ImageButton settings;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
-        settings = findViewById(id.SettingsButton);
+        settings = findViewById(id.settingsButton);
         settings.setOnClickListener(
                 v -> {
                     Intent i = new Intent(MainActivity.this,settings_screen.class);
