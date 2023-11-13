@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/HomeText"
-        android:layout_width="374dp"
-        android:layout_height="105dp"
+        android:layout_width="416dp"
+        android:layout_height="67dp"
         android:fontFamily="@font/abril_fatface"
         android:minHeight="48dp"
         android:scaleType="fitCenter"
@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.121"
-        tools:ignore="LabelFor,TextSizeCheck" />
+        tools:ignore="LabelFor,TextSizeCheck,VisualLintBounds" />
 
     <ImageView
         android:id="@+id/GlassesImage"
@@ -42,12 +42,12 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/homeIcon"
+        android:id="@+id/homeButton"
         android:layout_width="76dp"
         android:layout_height="73dp"
         android:background="@null"
         android:contentDescription="@string/app_name"
-        android:padding="20dp"
+        android:padding="13dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,6 +57,7 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageButton
+        android:id="@+id/settingsButton"
         android:layout_width="76dp"
         android:layout_height="73dp"
         android:background="@null"
@@ -71,12 +72,12 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageButton
-        android:id="@+id/EncodingScreen"
+        android:id="@+id/EncodeButton"
         android:layout_width="76dp"
         android:layout_height="73dp"
         android:background="@null"
         android:contentDescription="@string/app_name"
-        android:padding="20dp"
+        android:padding="13dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,11 +88,11 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/EncodeButton"
+        android:id="@+id/EncodingAlgButton"
         android:layout_width="310dp"
         android:layout_height="118dp"
         android:background="@drawable/button_border"
-        android:text="Encoding Algorithm"
+        android:text="@string/EncodingAlgorithms"
         android:textColor="#40C4FF"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,15 +100,15 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintVertical_bias="0.45"
+        tools:ignore="TextContrastCheck,TextSizeCheck" />
 
     <Button
-        android:id="@+id/DecodeButton"
+        android:id="@+id/DecodingAlgButton"
         android:layout_width="310dp"
         android:layout_height="118dp"
         android:background="@drawable/button_border"
-        android:text="Decoding Algorithm"
+        android:text="@string/DecodingAlgorithms"
         android:textColor="#40C4FF"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -115,18 +116,22 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.771"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintVertical_bias="0.727"
+        tools:ignore="TextContrastCheck,TextSizeCheck" />
 
     <TextView
         android:id="@+id/instructions"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:text="Click on a field you would like to learn more about"
+        android:layout_width="411dp"
+        android:layout_height="87dp"
+        android:text="@string/EducationPrompt"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HomeText" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228"
+        tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
