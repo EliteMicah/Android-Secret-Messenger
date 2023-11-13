@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">Secret_Messenger</string>
     <string name="HomeText">SECRET MESSENGER</string>
     <string name="EducationButton">Education</string>
@@ -7,12 +7,18 @@
     <string name="Cryptography">CRYPTOGRAPHY</string>
     <string name="blank"> </string>
     <string name="education">EDUCATION</string>
+    <string name="settings">SETTINGS</string>
     <string name="EncodeText"> Encoded Message </string>
     <string name="DecodeText"> Decoded Message </string>
+    <string name="EncodingAlgorithms"> Encoding Algorithms </string>
+    <string name="DecodingAlgorithms"> Decoding Algorithms </string>
+    <string name="EducationPrompt"> Click on a field you would like to learn more about </string>
+    <string name="LevelText"> Choose Level </string>
+    <string name="settingsLevelText">Encryption Level</string>
 
     <string-array name="encoding_levels">
-        <item>Low Level</item>
-        <item>Medium Level</item>
-        <item>High Level</item>
+        <item> Low </item>
+        <item> Medium </item>
+        <item> High </item>
     </string-array>
 </resources>
