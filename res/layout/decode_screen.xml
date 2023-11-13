@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/HomeText"
-        android:layout_width="374dp"
-        android:layout_height="105dp"
+        android:layout_width="392dp"
+        android:layout_height="63dp"
         android:fontFamily="@font/abril_fatface"
         android:minHeight="48dp"
         android:scaleType="fitCenter"
@@ -42,12 +42,12 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/homeIcon"
+        android:id="@+id/homeButton"
         android:layout_width="76dp"
         android:layout_height="73dp"
         android:background="@null"
         android:contentDescription="@string/app_name"
-        android:padding="20dp"
+        android:padding="13dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,7 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageButton
-        android:id="@+id/settings"
+        android:id="@+id/settingsButton"
         android:layout_width="76dp"
         android:layout_height="73dp"
         android:background="@null"
@@ -72,12 +72,12 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageButton
-        android:id="@+id/education"
+        android:id="@+id/educationButton"
         android:layout_width="76dp"
         android:layout_height="73dp"
         android:background="@null"
         android:contentDescription="@string/app_name"
-        android:padding="20dp"
+        android:padding="17dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,12 +91,12 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="200dp"
+        android:background="@drawable/black_border"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/black_border"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/decodeText"
@@ -104,12 +104,12 @@
         android:layout_height="50dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="27dp"
-        android:ems="10"
+        android:autofillHints=""
+        android:background="@drawable/black_border"
+        android:hint="@string/EncodeText"
         android:inputType="text"
         android:text="@string/blank"
-        android:hint="@string/EncodeText"
         android:textAlignment="center"
-        android:background="@drawable/black_border"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner1" />
 
@@ -119,14 +119,14 @@
         android:layout_height="50dp"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="192dp"
-        android:ems="10"
         android:inputType="text"
         android:text="@string/blank"
         android:hint="@string/DecodeText"
         android:textAlignment="center"
         android:background="@drawable/black_border"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
 
     <ImageButton
         android:id="@+id/copy_button"
@@ -166,14 +166,29 @@
         android:background="@drawable/borders"
         android:contentDescription="@string/app_name"
         android:padding="20dp"
+        android:rotation="90"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/encodeText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/decodeText"
+        app:layout_constraintVertical_bias="0.500"
         app:srcCompat="@drawable/double_arrows"
-        app:tint="@color/black"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/levelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LevelText"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/decodeText"
+        app:layout_constraintEnd_toEndOf="@+id/spinner1"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner1"
+        app:layout_constraintVertical_bias="0.26" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
