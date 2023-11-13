@@ -23,7 +23,7 @@ public class settings_screen extends AppCompatActivity {
         setContentView(layout.settings_screen);
 
         //DROPDOWN MENU SETUP
-        Spinner staticSpinner = (Spinner) findViewById(R.id.spinner1);
+        Spinner staticSpinner = findViewById(id.spinner1);
 
         // Create an ArrayAdapter using the string array and a default spinner
         ArrayAdapter<CharSequence> staticAdapter = ArrayAdapter
