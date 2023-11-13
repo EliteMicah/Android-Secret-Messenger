@@ -7,7 +7,7 @@
     tools:context=".settings_screen">
 
     <TextView
-        android:id="@+id/HomeText"
+        android:id="@+id/SettingsText"
         android:layout_width="392dp"
         android:layout_height="63dp"
         android:fontFamily="@font/abril_fatface"
@@ -42,7 +42,7 @@
         tools:ignore="ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/settingsLevelText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settingsLevelText"
@@ -51,13 +51,13 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.357" />
 
     <ImageButton
-        android:id="@+id/homeIcon"
+        android:id="@+id/homeButton"
         android:layout_width="76dp"
         android:layout_height="73dp"
         android:background="@null"
@@ -72,7 +72,7 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageButton
-        android:id="@+id/EncodingScreen"
+        android:id="@+id/EncodeButton"
         android:layout_width="76dp"
         android:layout_height="73dp"
         android:background="@null"
@@ -106,13 +106,14 @@
         android:id="@+id/spinner1"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="92dp"
         android:background="@drawable/black_border"
-        android:hint="@string/LevelText"
         android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
