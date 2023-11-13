@@ -1,13 +1,13 @@
 package com.example.secret_messenger;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.widget.Spinner;
-import android.widget.ArrayAdapter;
-import android.os.Bundle;
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.Spinner;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 
@@ -15,19 +15,19 @@ public class decode_screen extends AppCompatActivity {
 
 
     ImageButton home;
-    ImageButton settings;
     ImageButton swap;
-
     ImageButton education;
+    ImageButton settings;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.decode_screen);
 
 
-        Spinner staticSpinner = (Spinner) findViewById(R.id.spinner1);
+        Spinner staticSpinner = findViewById(R.id.spinner1);
 
         // Create an ArrayAdapter using the string array and a default spinner
         ArrayAdapter<CharSequence> staticAdapter = ArrayAdapter
@@ -40,16 +40,12 @@ public class decode_screen extends AppCompatActivity {
         staticSpinner.setAdapter(staticAdapter);
 
 
-
         //HOME BUTTON
-        home = findViewById(R.id.homeIcon);
+        home = findViewById(R.id.homeButton);
         home.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(decode_screen.this,MainActivity.class);
-                        startActivity(i);
-                    }
+                v -> {
+                    Intent i = new Intent(decode_screen.this,MainActivity.class);
+                    startActivity(i);
                 }
         );
 
@@ -57,29 +53,27 @@ public class decode_screen extends AppCompatActivity {
         //SWAP BUTTON
         swap = findViewById(R.id.swapbutton);
         swap.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(decode_screen.this,encode_screen.class);
-                        startActivity(i);
-                    }
+                v -> {
+                    Intent i = new Intent(decode_screen.this,encode_screen.class);
+                    startActivity(i);
                 }
         );
 
         //EDUCATION BUTTON
-        education = findViewById(R.id.education);
+        education = findViewById(R.id.educationButton);
         education.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(decode_screen.this,education_screen.class);
-                        startActivity(i);
-                    }
+                v -> {
+                    Intent i = new Intent(decode_screen.this,education_screen.class);
+                    startActivity(i);
+                }
+        );
+
+        settings = findViewById(R.id.settingsButton);
+        settings.setOnClickListener(
+                v -> {
+                    Intent i = new Intent(decode_screen.this,settings_screen.class);
+                    startActivity(i);
                 }
         );
     }
-
-
-
 }
-
