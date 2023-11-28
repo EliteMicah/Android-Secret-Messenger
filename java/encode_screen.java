@@ -22,6 +22,11 @@ public class encode_screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.encode_screen);
 
+        // Back Button Toolbar
+        androidx.appcompat.widget.Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
         //DROPDOWN MENU SETUP
         Spinner staticSpinner = findViewById(R.id.spinner1);
 
