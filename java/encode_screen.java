@@ -3,10 +3,16 @@ package com.example.secret_messenger;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.Objects;
 
 
 public class encode_screen extends AppCompatActivity {
@@ -15,6 +21,12 @@ public class encode_screen extends AppCompatActivity {
     ImageButton swap;
     ImageButton education;
     ImageButton settings;
+    ImageButton copy;
+    Button enter;
+
+    EditText decodedmessage;
+    String encodedmessage;
+    TextView encodedtext;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -50,6 +62,30 @@ public class encode_screen extends AppCompatActivity {
                 }
         );
 
+        //ENTER BUTTON
+        enter = findViewById(R.id.EnterButton);
+        enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String level = staticSpinner.getSelectedItem().toString();
+                switch(level) {
+                    case("Low") :
+                        decodedmessage = (EditText) findViewById(R.id.encodeText);
+                        String decodestring = decodedmessage.getText().toString();
+                        encodedmessage = cipher(decodestring, 5);
+                        encodedtext = (TextView) findViewById(R.id.decodeText);
+                        encodedtext.setText(encodedmessage);
+                        break;
+                    case("Medium"):
+                        break;
+                    case("High"):
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+
 
         //SWAP BUTTON
         swap = findViewById(R.id.swapbutton);
@@ -78,4 +114,31 @@ public class encode_screen extends AppCompatActivity {
                 }
         );
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+
+        // If we got here, the user's action was not recognized.
+        // Invoke the superclass to handle it.
+        return super.onOptionsItemSelected(item);
+    }
+
+    String cipher(String msg, int shift){
+        String s = "";
+        int len = msg.length();
+        for(int x = 0; x < len; x++){
+            char c = (char)(msg.charAt(x) + shift);
+            if (c > 'z')
+                s += (char)(msg.charAt(x) - (26-shift));
+            else
+                s += (char)(msg.charAt(x) + shift);
+        }
+        return s;
+    }
+
+
 }
