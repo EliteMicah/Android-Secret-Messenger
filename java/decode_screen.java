@@ -3,12 +3,18 @@ package com.example.secret_messenger;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Objects;
 
 
 public class decode_screen extends AppCompatActivity {
@@ -18,6 +24,12 @@ public class decode_screen extends AppCompatActivity {
     ImageButton swap;
     ImageButton education;
     ImageButton settings;
+    ImageButton copy;
+    Button enter;
+
+    EditText decodedmessage;
+    String encodedmessage;
+    TextView encodedtext;
 
 
     @SuppressLint("MissingInflatedId")
@@ -26,6 +38,10 @@ public class decode_screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.decode_screen);
 
+        // Back Button Toolbar
+        androidx.appcompat.widget.Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         Spinner staticSpinner = findViewById(R.id.spinner1);
 
@@ -48,6 +64,30 @@ public class decode_screen extends AppCompatActivity {
                     startActivity(i);
                 }
         );
+
+        //ENTER BUTTON
+        enter = findViewById(R.id.EnterButton);
+        enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String level = staticSpinner.getSelectedItem().toString();
+                switch(level) {
+                    case("Low") :
+                        decodedmessage = (EditText) findViewById(R.id.decodeText);
+                        String decodestring = decodedmessage.getText().toString();
+                        encodedmessage = decipher(decodestring, 5);
+                        encodedtext = (TextView) findViewById(R.id.encodeText);
+                        encodedtext.setText(encodedmessage);
+                        break;
+                    case("Medium"):
+                        break;
+                    case("High"):
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
 
 
         //SWAP BUTTON
@@ -75,5 +115,30 @@ public class decode_screen extends AppCompatActivity {
                     startActivity(i);
                 }
         );
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        // If we got here, the user's action was not recognized.
+        // Invoke the superclass to handle it.
+        return super.onOptionsItemSelected(item);
+    }
+
+    String decipher(String msg, int shift){
+        shift=-shift;
+        String s = "";
+        int len = msg.length();
+        for(int x = 0; x < len; x++){
+            char c = (char)(msg.charAt(x) + shift);
+            if (c > 'z')
+                s += (char)(msg.charAt(x) - (26-shift));
+            else
+                s += (char)(msg.charAt(x) + shift);
+        }
+        return s;
     }
 }
