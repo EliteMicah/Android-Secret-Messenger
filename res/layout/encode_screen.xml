@@ -114,7 +114,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/encodeText"
+        android:id="@+id/decodeText"
         android:layout_width="330dp"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
@@ -136,7 +136,7 @@
         app:layout_constraintVertical_bias="0.382" />
 
     <TextView
-        android:id="@+id/decodeText"
+        android:id="@+id/encodedText"
         android:layout_width="326dp"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
@@ -159,12 +159,12 @@
         android:id="@+id/copy_button"
         android:layout_width="59dp"
         android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
         android:background="@null"
         android:contentDescription="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/decodeText"
+        app:layout_constraintTop_toBottomOf="@+id/encodedText"
         app:srcCompat="?attr/actionModeCopyDrawable"
         app:tint="@color/black"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -191,12 +191,11 @@
         android:padding="20dp"
         android:rotation="90"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/decodeText"
+        app:layout_constraintBottom_toTopOf="@+id/encodedText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/encodeText"
-        app:layout_constraintVertical_bias="0.541"
+        app:layout_constraintTop_toBottomOf="@+id/decodeText"
         app:srcCompat="@drawable/double_arrows"
         tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,SpeakableTextPresentCheck" />
 
@@ -207,8 +206,8 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/borders"
         android:text="@string/Encrypt"
-        app:layout_constraintStart_toStartOf="@+id/encodeText"
-        app:layout_constraintTop_toBottomOf="@+id/encodeText" />
+        app:layout_constraintStart_toStartOf="@+id/encodedText"
+        app:layout_constraintTop_toBottomOf="@+id/decodeText" />
 
     <TextView
         android:id="@+id/levelText"
@@ -217,7 +216,7 @@
         android:text="@string/LevelText"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/encodeText"
+        app:layout_constraintBottom_toTopOf="@+id/decodeText"
         app:layout_constraintEnd_toEndOf="@+id/spinner1"
         app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
