@@ -57,6 +57,7 @@ public class encode_screen extends AppCompatActivity {
         staticSpinner.setAdapter(staticAdapter);
 
         encodedText = findViewById(R.id.encodedText);
+        decodedMessage = findViewById(R.id.decodeText);
         copyButton = findViewById(R.id.copy_button);
         pasteButton = findViewById(R.id.paste_button);
 
@@ -65,6 +66,13 @@ public class encode_screen extends AppCompatActivity {
             public void onClick(View v) {
                 String textToCopy = encodedText.getText().toString();
                 copyToClipboard(textToCopy);
+            }
+        });
+
+        pasteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pasteFromClipboard();
             }
         });
 
@@ -152,6 +160,20 @@ public class encode_screen extends AppCompatActivity {
         }
     }
 
+    private void pasteFromClipboard() {
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        if (clipboard != null && clipboard.hasPrimaryClip()) {
+            ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
+            CharSequence pasteData = item.getText();
+            if (pasteData != null) {
+                decodedMessage.setText(pasteData); // Set pasted text to decodeText EditText
+                Toast.makeText(this, "Text pasted from clipboard", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "Clipboard is empty", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     String cipher(String msg){
         StringBuilder s = new StringBuilder();
         int len = msg.length();
@@ -164,6 +186,4 @@ public class encode_screen extends AppCompatActivity {
         }
         return s.toString();
     }
-
-
 }
