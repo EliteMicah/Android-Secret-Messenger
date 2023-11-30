@@ -1,6 +1,8 @@
 package com.example.secret_messenger;
 
 import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -11,9 +13,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
-
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Objects;
 
 
@@ -24,12 +25,13 @@ public class decode_screen extends AppCompatActivity {
     ImageButton swap;
     ImageButton education;
     ImageButton settings;
-    ImageButton copy;
+    ImageButton copyButton;
+    ImageButton pasteButton;
     Button enter;
 
-    EditText decodedmessage;
-    String encodedmessage;
-    TextView encodedtext;
+    EditText encodedMessage;
+    String decodedMessage;
+    TextView decodedText;
 
 
     @SuppressLint("MissingInflatedId")
@@ -55,6 +57,18 @@ public class decode_screen extends AppCompatActivity {
         // Apply the adapter to the spinner
         staticSpinner.setAdapter(staticAdapter);
 
+        decodedText = findViewById(R.id.decodedText);
+        copyButton = findViewById(R.id.copy_button);
+        pasteButton = findViewById(R.id.paste_button);
+
+        copyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String textToCopy = decodedText.getText().toString();
+                copyToClipboard(textToCopy);
+            }
+        });
+
 
         //HOME BUTTON
         home = findViewById(R.id.homeButton);
@@ -73,11 +87,11 @@ public class decode_screen extends AppCompatActivity {
                 String level = staticSpinner.getSelectedItem().toString();
                 switch(level) {
                     case("Low") :
-                        decodedmessage = (EditText) findViewById(R.id.decodeText);
-                        String decodestring = decodedmessage.getText().toString();
-                        encodedmessage = decipher(decodestring, 5);
-                        encodedtext = (TextView) findViewById(R.id.encodeText);
-                        encodedtext.setText(encodedmessage);
+                        encodedMessage = (EditText) findViewById(R.id.encodeText);
+                        String decodestring = encodedMessage.getText().toString();
+                        decodedMessage = decipher(decodestring, 5);
+                        decodedText = (TextView) findViewById(R.id.decodedText);
+                        decodedText.setText(decodedMessage);
                         break;
                     case("Medium"):
                         break;
@@ -126,6 +140,15 @@ public class decode_screen extends AppCompatActivity {
         // If we got here, the user's action was not recognized.
         // Invoke the superclass to handle it.
         return super.onOptionsItemSelected(item);
+    }
+
+    private void copyToClipboard(String text) {
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("Copied Text", text);
+        if (clipboard != null) {
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(this, "Text copied to clipboard", Toast.LENGTH_SHORT).show();
+        }
     }
 
     String decipher(String msg, int shift){
