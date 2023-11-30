@@ -62,7 +62,7 @@
         android:layout_height="118dp"
         android:background="@drawable/button_border"
         android:text="@string/DecodeButton"
-        android:textColor="#40C4FF"
+        android:textColor="#2A8DFB"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +78,7 @@
         android:layout_height="118dp"
         android:background="@drawable/button_border"
         android:text="@string/EducationButton"
-        android:textColor="#40C4FF"
+        android:textColor="#2A8DFB"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
         android:layout_height="118dp"
         android:background="@drawable/button_border"
         android:text="@string/EncodeButton"
-        android:textColor="#40C4FF"
+        android:textColor="#2A8DFB"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,7 +117,7 @@
         app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/home_icon"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/settingsButton"
@@ -134,6 +134,6 @@
         app:layout_constraintTop_toBottomOf="@+id/DecodeButton"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/settings_transparent"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
