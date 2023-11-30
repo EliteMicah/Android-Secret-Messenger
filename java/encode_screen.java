@@ -14,9 +14,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Objects;
 
 
@@ -90,14 +88,14 @@ public class encode_screen extends AppCompatActivity {
                     case("Low") :
                         decodedMessage = (EditText) findViewById(R.id.decodeText);
                         String decodestring = decodedMessage.getText().toString();
-                        encodedMessage = cipher(decodestring, 5);
+                        encodedMessage = cipher(decodestring);
                         encodedText = (TextView) findViewById(R.id.encodedText);
                         encodedText.setText(encodedMessage);
                         break;
-                    case("Medium"):
-                        break;
-                    case("High"):
-                        break;
+                    //case("Medium"):
+                        //break;
+                    //case("High"):
+                        //break;
                     default:
                         break;
                 }
@@ -154,17 +152,17 @@ public class encode_screen extends AppCompatActivity {
         }
     }
 
-    String cipher(String msg, int shift){
-        String s = "";
+    String cipher(String msg){
+        StringBuilder s = new StringBuilder();
         int len = msg.length();
         for(int x = 0; x < len; x++){
-            char c = (char)(msg.charAt(x) + shift);
+            char c = (char)(msg.charAt(x) + 5);
             if (c > 'z')
-                s += (char)(msg.charAt(x) - (26-shift));
+                s.append((char) (msg.charAt(x) - (26 - 5)));
             else
-                s += (char)(msg.charAt(x) + shift);
+                s.append((char) (msg.charAt(x) + 5));
         }
-        return s;
+        return s.toString();
     }
 
 
