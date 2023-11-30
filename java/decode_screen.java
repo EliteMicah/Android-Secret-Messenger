@@ -93,10 +93,10 @@ public class decode_screen extends AppCompatActivity {
                         decodedText = (TextView) findViewById(R.id.decodedText);
                         decodedText.setText(decodedMessage);
                         break;
-                    case("Medium"):
-                        break;
-                    case("High"):
-                        break;
+                    //case("Medium"):
+                        //break;
+                    //case("High"):
+                        //break;
                     default:
                         break;
                 }
@@ -153,15 +153,15 @@ public class decode_screen extends AppCompatActivity {
 
     String decipher(String msg, int shift){
         shift=-shift;
-        String s = "";
+        StringBuilder s = new StringBuilder();
         int len = msg.length();
         for(int x = 0; x < len; x++){
             char c = (char)(msg.charAt(x) + shift);
             if (c > 'z')
-                s += (char)(msg.charAt(x) - (26-shift));
+                s.append((char) (msg.charAt(x) - (26 - shift)));
             else
-                s += (char)(msg.charAt(x) + shift);
+                s.append((char) (msg.charAt(x) + shift));
         }
-        return s;
+        return s.toString();
     }
 }
