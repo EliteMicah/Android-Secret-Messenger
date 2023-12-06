@@ -103,35 +103,33 @@
         tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/EncodingAlgButton"
-        android:layout_width="310dp"
+        android:id="@+id/LowLevelButton"
+        android:layout_width="330dp"
         android:layout_height="118dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/button_border"
-        android:text="@string/EncodingAlgorithms"
+        android:text="@string/LowLevel"
         android:textColor="#2A8DFB"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintTop_toBottomOf="@+id/instructions"
         tools:ignore="TextContrastCheck,TextSizeCheck" />
 
     <Button
-        android:id="@+id/DecodingAlgButton"
-        android:layout_width="310dp"
+        android:id="@+id/MediumLevelButton"
+        android:layout_width="330dp"
         android:layout_height="118dp"
         android:background="@drawable/button_border"
-        android:text="@string/DecodingAlgorithms"
+        android:text="@string/MediumLevel"
         android:textColor="#2A8DFB"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/HighLevelButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.727"
+        app:layout_constraintTop_toBottomOf="@+id/LowLevelButton"
         tools:ignore="TextContrastCheck,TextSizeCheck" />
 
     <TextView
@@ -148,5 +146,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.228"
         tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/HighLevelButton"
+        android:layout_width="330dp"
+        android:layout_height="118dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_border"
+        android:text="@string/HighLevel"
+        android:textColor="#2A8DFB"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/EncodeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck,TextSizeCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
