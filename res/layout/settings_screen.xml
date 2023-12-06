@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".settings_screen">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="412dp"
+        android:layout_height="56dp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="VisualLintBounds" />
+
     <TextView
         android:id="@+id/SettingsText"
         android:layout_width="392dp"
@@ -69,7 +84,7 @@
         app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/home_icon"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/EncodeButton"
@@ -85,7 +100,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_lock_lock"
         app:tint="@color/black"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/SettingsButton"
@@ -100,15 +115,16 @@
         app:layout_constraintHorizontal_bias="0.913"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/settings_transparent"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinner"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="92dp"
         android:background="@drawable/black_border"
         android:spinnerMode="dropdown"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.888"
