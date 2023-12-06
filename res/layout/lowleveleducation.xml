@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="412dp"
+        android:layout_height="56dp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/GlassesImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/app_name"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/glasses"
+        app:tint="@color/lightBlue"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_toolbar"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/abril_fatface"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/lowEdHeader"
+        android:textColor="#2d9bf0"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/explanationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTextView"
+        android:layout_marginTop="50dp"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:text="@string/lowEdText1"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerTextView"
+        tools:ignore="VisualLintLongText" />
+
+    <TextView
+        android:id="@+id/exampleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/explanationTextView"
+        android:layout_marginTop="40dp"
+        android:padding="16dp"
+        android:text="@string/lowEdText2"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explanationTextView" />
+
+    <ImageButton
+        android:id="@+id/homeIcon"
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="13dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_icon"
+        tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck"
+    />
+
+    <ImageButton
+        android:id="@id/SettingsButton"
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/settings_transparent"
+        tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck"
+    />
+
+    <ImageButton
+        android:id="@+id/EncodingScreen"
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="13dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_lock"
+        app:tint="@color/black"
+        tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
