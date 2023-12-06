@@ -1,20 +1,34 @@
-<resources>
-    <string name="app_name">Secret_Messenger</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">""</string>
     <string name="HomeText">SECRET MESSENGER</string>
     <string name="EducationButton">Education</string>
     <string name="EncodeButton">Encode</string>
     <string name="DecodeButton">Decode</string>
     <string name="Cryptography">CRYPTOGRAPHY</string>
-    <string name="blank"> </string>
+    <string name="blank">""</string>
     <string name="education">EDUCATION</string>
     <string name="settings">SETTINGS</string>
     <string name="EncodeText"> Encoded Message </string>
     <string name="DecodeText"> Decoded Message </string>
-    <string name="EncodingAlgorithms"> Encoding Algorithms </string>
-    <string name="DecodingAlgorithms"> Decoding Algorithms </string>
+    <string name="LowLevel"> Low Level Algorithm </string>
+    <string name="MediumLevel"> Medium Level Algorithm </string>
+    <string name="HighLevel"> High Level Algorithm </string>
     <string name="EducationPrompt"> Click on a field you would like to learn more about </string>
-    <string name="LevelText"> Choose Level </string>
+    <string name="LevelText"> Level </string>
     <string name="settingsLevelText">Encryption Level</string>
+    <string name="Encrypt"> Encrypt </string>
+    <string name="Decrypt"> Decrypt </string>
+    <string name="lowEdHeader"> Low Level Security Education </string>
+    <string name="lowEdText1"> Our low level encryption uses an algorithm known as a Caesar Cipher. A Caesar Cipher is a substitution cipher where each letter in the plaintext is shifted a certain number of places down the ascii table. </string>
+    <string name="lowEdText2" tools:ignore="StringEscaping"> Example: Input \'HELLO\' with an offset key of 2 becomes \'JGNNQ\'. </string>
+    <string name="mediumEdHeader"> Medium Level Security Education </string>
+    <string name="mediumEdText1"> AES (Advanced Encryption Standard) is a symmetric encryption algorithm widely used for securing sensitive data. It operates on fixed-size blocks of data and supports key sizes of 128, 192, or 256 bits. It uses the same key for encryption and decryption </string>
+    <string name="mediumEdText2" tools:ignore="StringEscaping"> Example: With a key of \'SECRETKEY12345678\',
+         encrypting the message \'HELLO\' using AES results in a complex ciphertext such as:
+rGJm92kfWTpNpT2Zj5XUIg== </string>
+    <string name="highEdHeader"> High Level Security Education </string>
+    <string name="highEdText1"> RSA (Rivest–Shamir–Adleman) is a widely used asymmetric encryption algorithm. It involves the use of a public key for encryption and a private key for decryption. The security of RSA is based on the practical difficulty of factoring the product of two large prime numbers, the factoring problem. </string>
+    <string name="highEdText2"> In RSA, a message encrypted with the public key can only be decrypted using the private key, and vice versa. </string>
 
     <string-array name="encoding_levels">
         <item> Low </item>
