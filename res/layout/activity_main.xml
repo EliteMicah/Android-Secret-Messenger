@@ -120,6 +120,22 @@
         tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
+        android:id="@+id/EncodingScreen"
+        android:layout_width="76dp"
+        android:layout_height="73dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="13dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_lock"
+        app:tint="@color/black"
+        tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
         android:id="@+id/settingsButton"
         android:layout_width="76dp"
         android:layout_height="73dp"
